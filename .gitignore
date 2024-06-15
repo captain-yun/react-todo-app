@@ -1,0 +1,42 @@
+# Node.js 관련
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite 관련
+dist/
+.vite/
+.vite-cache/
+
+# 환경 변수 파일
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 빌드 아티팩트
+build/
+
+# 로컬 설정 파일
+.vscode/
+.idea/
+
+# 로그 파일
+*.log
+
+# OS별 파일
+.DS_Store
+Thumbs.db
+
+# JSON 서버 관련
+db.json
+
+# 기타
+*.local
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
