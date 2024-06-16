@@ -1,16 +1,35 @@
+import { useState } from 'react';
+
 const Authentication = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const handleLogin = () => {
-    // 로그인 로직을 추가해야 합니다.
+    setIsLoggedIn(true);
+    // 로그인 로직 추가
   };
 
   const handleLogout = () => {
-    // 로그아웃 로직을 추가해야 합니다.
+    setIsLoggedIn(false);
+    // 로그아웃 로직 추가
   };
 
   return (
     <div>
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={handleLogout}>Logout</button>
+      {isLoggedIn ? (
+        <button
+          onClick={handleLogout}
+          className="bg-red-300 text-white px-4 py-2 rounded-md hover:bg-red-400"
+        >
+          Logout
+        </button>
+      ) : (
+        <button
+          onClick={handleLogin}
+          className="bg-green-400 text-white px-4 py-2 rounded-md hover:bg-green-500"
+        >
+          Login
+        </button>
+      )}
     </div>
   );
 };

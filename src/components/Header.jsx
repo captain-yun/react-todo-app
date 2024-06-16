@@ -1,27 +1,23 @@
+import Authentication from "./Authentication";
+
 const Header = () => {
   return (
-    <header className="bg-blue-300 text-white p-4 shadow-md flex justify-between items-center">
+    <header className="bg-blue-400 text-white p-4 shadow-md flex justify-between items-center">
       <h1 className="text-2xl font-bold">Todo List</h1>
-      <nav>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="/" className="hover:underline">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/about" className="hover:underline">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="hover:underline">
-              Contact
-            </a>
-          </li>
-        </ul>
+      <nav className="flex space-x-4">
+        <a href="/" className="text-white hover:text-gray-300">
+          Home
+        </a>
+        <a href="/about" className="text-white hover:text-gray-300">
+          About
+        </a>
+        <a href="/contact" className="text-white hover:text-gray-300">
+          Contact
+        </a>
       </nav>
+      <Authentication />
     </header>
   );
 };
+
 export default Header;
